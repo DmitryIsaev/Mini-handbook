@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
         int sum1 = 10 + 20;
@@ -31,12 +33,12 @@ public class Main {
         int division1 = 100 / 10;
         int division2 = division1 / 2;
         int division3 = division1 / division2;
-        System.out.println("division1 = "+ division1 + "\ndivision2 = "+ division2 + "\ndivision3 = " + division3);
+        System.out.println("division1 = " + division1 + "\ndivision2 = " + division2 + "\ndivision3 = " + division3);
 
         int division4 = 100 / 10 / 2;
         System.out.println("division4 = " + division4);
 
-        int division5 = 100 /(10 / 2);
+        int division5 = 100 / (10 / 2);
         System.out.println("division5 = " + division5);
 
         int result1 = 100;
@@ -50,6 +52,40 @@ public class Main {
         int result2 = 100;
         result2 %= 9;           //remainder = value % 9
         System.out.println("result2 = " + result2);
+
+        int result3 = 10 * 10 / 2 + 5 * (20 / 4); //1.Действие в скобках; 2.Умножение и деление; 3.Сложение и вычитание
+        System.out.println("result3 = " + result3);
+
+        int result4 = 100 / 8;
+        System.out.println("result4 = " + result4); //Округляется без остатка
+
+        //Все типы данных, включенные в математическое выражение, должны быть типами с плавающей запятой
+        double result5 = (double) 100 / 8; //Либо так: double result5 = 100.0 / 8.0;
+        System.out.println("result5 = " + result5); //Результат 12.5
+
+        double doubleResult = 100D / 8D; //Ещё один способ обозначать подходящий тип
+        float floatResult = 100F / 8F;
+        System.out.println("doubleResult = " + doubleResult + "\nfloatResult = " + floatResult);
+
+        //Типы данных с плавающей запятой не дают точных результатов:
+        double resultDbl = 0D;
+        System.out.println("resultDbl = " + resultDbl);
+        for (int i = 0; i < 100; i++) {
+            resultDbl += 0.01D;
+        }
+        System.out.println("resultDbl = " + resultDbl);
+
+        //Вариант 1
+        for (int i = 0; i < 10; i++)
+            System.out.println(i / 10D);
+
+        //Вариант 2. Использовать тип BigDecimal
+        BigDecimal step = new BigDecimal("0.1");
+        for (BigDecimal value1 = BigDecimal.ZERO;
+             value1.compareTo(BigDecimal.ONE) < 0;
+             value1 = value1.add(step)) {
+            System.out.println(value1);
+        }
 
         int a = 2;
         int b = 3;
