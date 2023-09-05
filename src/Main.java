@@ -1,5 +1,7 @@
 import java.math.BigDecimal;
 
+import static java.lang.Math.*;
+
 public class Main {
     public static void main(String[] args) {
         int sum1 = 10 + 20;
@@ -86,6 +88,35 @@ public class Main {
              value1 = value1.add(step)) {
             System.out.println(value1);
         }
+
+        double result6 = Math.floorDiv(17,9); //Округление
+        System.out.println("result3: " + result6);
+        double result7 = 17D / 9D;
+        System.out.println("result4: " + result7);
+
+        double roundedDown = round(23.445);
+        double roundedUp   = round(23.545);
+        System.out.println("Округление 23.445: " + roundedDown + "\nОкругление 23.545: " + roundedUp);
+
+        double random = Math.random();
+        System.out.println("Рандомное число: " + random);
+
+        double random1 = Math.random() * 100;
+        System.out.println("Рандомное число от 0 до 100: " + random1);
+
+        //round(), floor() или ceil(). Один из трёх способов округлить
+        double random2 = round(random1);
+        System.out.println("Обычное округление " + (int) random2); //Обычное округление
+        random2 = floor(random1);
+        System.out.println("Округление к наименьшему числу " + (int) random2); //Округление к наименьшему числу
+        random2 = ceil(random1);
+        System.out.println("Округление к наибольшему числу " + (int) random2); //Округление к наибольшему числу
+
+        int min = Math.min(10, 20); //Нахождение минимального числа
+        System.out.println("min = " + min);
+
+        int max = Math.max(10, 20); //Нахождение максимального числа
+        System.out.println("max = " + max);
 
         int a = 2;
         int b = 3;
