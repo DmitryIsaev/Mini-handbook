@@ -118,6 +118,63 @@ public class Main {
         int max = Math.max(10, 20); //Нахождение максимального числа
         System.out.println("max = " + max);
 
+        //Возведение числа Эйлера в степень. е ~ 2,7182818284
+        double exp1 = Math.exp(1);
+        System.out.println("exp1 = " + exp1);
+        double exp2 = Math.exp(2);
+        System.out.println("exp2 = " + exp2);
+
+        //Логарифм числа Эйлера
+        double log1  = Math.log(1);
+        System.out.println("log1 = " + log1);
+        double log10 = Math.log(10);
+        System.out.println("log10 = " + log10);
+
+        //Логарифм числа 10
+        double log10_1   = Math.log10(1);
+        System.out.println("log10_1 = " + log10_1);
+        double log10_100 = Math.log10(100);
+        System.out.println("log10_100 = " + log10_100);
+
+        //Число в степени
+        double pow2 = Math.pow(2,2); //2^2=4
+        System.out.println("pow2 = " + pow2);
+        double pow8 = Math.pow(2,8); //2^8=256
+        System.out.println("pow8 = " + pow8);
+
+        //Корень квадратный числа
+        double sqrt4 = Math.sqrt(4);
+        System.out.println("sqrt4 = " + sqrt4);
+        double sqrt9 = Math.sqrt(9);
+        System.out.println("sqrt9 = " + sqrt9);
+
+        System.out.println(Math.PI);
+        //System.out.println(PI); //Или так
+
+        //Значение синуса в радианах
+        double sin = Math.sin(PI);
+        System.out.println("sin = " + sin);
+
+        //Значение косинуса в радианах
+        double cos = Math.cos(Math.PI);
+        System.out.println("cos = " + cos);
+
+        //Значение тангенса в радианах
+        double tan = Math.tan(Math.PI);
+        System.out.println("tan = " + tan);
+
+        //Значение синусоиды от 1 до -1
+        double asin = Math.asin(1.0);
+        System.out.println("asin = " + asin);
+
+        //Значение арккосинуса от 1 до -1:
+        double acos = Math.acos(1.0);
+        System.out.println("acos = " + acos);
+
+        //Значение арктангенса для значения от 1 до -1
+        double atan = Math.atan(1.0);
+        System.out.println("atan = " + atan);
+
         int a = 2;
         int b = 3;
         //Формулы сокращенного умножения
