@@ -175,6 +175,28 @@ public class Main {
         double atan = Math.atan(1.0);
         System.out.println("atan = " + atan);
 
+        //Метод Math.sinh() вычисляет значение гиперболического синуса значения между 1 и -1
+        double sinh = Math.sinh(1.0);
+        System.out.println("sinh = " + sinh);
+
+        //Метод Math.cosh() вычисляет значение гиперболического косинуса от 1 до -1
+        double cosh = Math.cosh(1.0);
+        System.out.println("cosh = " + cosh);
+
+        //Метод Math.tanh() вычисляет значение гиперболического тангенса значения от 1 до -1
+        double tanh = Math.tanh(1.0);
+        System.out.println("tanh = " + tanh);
+
+        //Метод Math.toDegrees() преобразует угол в радианах в градусы
+        double degrees = Math.toDegrees(Math.PI);
+        System.out.println("degrees = " + degrees);
+
+        //Метод Math.toRadians() преобразует угол в градусах в радианы
+        double radians = Math.toRadians(270);
+        System.out.println("radians = " + radians);
+        radians /= PI;
+        System.out.println("radians = " + radians + " PI");
+
         int a = 2;
         int b = 3;
         //Формулы сокращенного умножения
