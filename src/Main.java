@@ -207,5 +207,80 @@ public class Main {
         System.out.println("Сумма кубов: a^3+b^3 = " + ((a + b) * (a * a - a * b + b * b)));
         System.out.println("Куб суммы: (a+b)^3 = " + (a * a * a + 3 * a * a * b + 3 * a * b * b + b * b * b));
         System.out.println("Куб разности: (a-b)^3 = " + (a * a * a - 3 * a * a * b + 3 * a * b * b - b * b * b));
+
+        //String - неизменяемый класс, который кэшируется. Используется, когда редко будут модифицироваться строки.
+        String word = " Hello! ";
+        System.out.println(word);
+        word = word.toUpperCase(); //Верхний регистр
+        word = word.trim(); //Удаление лишних пробелов
+        System.out.println(word);
+
+        //Объединение слов/символов:
+        //StringBuilder - быстрый, но нет потокобезопасности
+        String part1 = "Всё может измениться";
+        String part2 = "за один день.";
+        StringBuilder allParts = new StringBuilder();
+        allParts.append(part1);
+        allParts.append(" ");
+        allParts.append(part2);
+        System.out.println(allParts);
+
+        //StringBuffer - потокобезопасный, но медленный
+        String part3 = "Если только";
+        String part4 = "искренне захотеть!";
+        StringBuffer resultParts = new StringBuffer();
+        resultParts.append(part3);
+        resultParts.append(" ");
+        resultParts.append(part4);
+        System.out.println(resultParts);
+
+        //StringBuffer. Использовать в работе со строками, которые часто будут модифицироваться, в однопоточной среде.
+        String numbers = "0123456789 ";
+
+        StringBuffer sb = new StringBuffer(numbers);
+
+        System.out.println(sb.substring(3)); // 3456789
+        System.out.println(sb.substring(4, 8)); // 4567
+        System.out.println(sb.replace(3, 5, "ABCDE")); // 012ABCDE56789
+
+        sb = new StringBuffer(numbers);
+        System.out.println(sb.reverse()); // 9876543210
+        sb.reverse(); // Вернем изначальный порядок
+
+        sb = new StringBuffer(numbers);
+        System.out.println(sb.delete(5, 9)); // 012349
+        System.out.println(sb.deleteCharAt(1)); // 02349
+        System.out.println(sb.insert(1, "One")); // 0One2349
+
+        //StringBuilder. Использовать в работе со строками, которые часто будут модифицироваться в многопоточной среде.
+        StringBuilder sb2 = new StringBuilder(numbers);
+
+        System.out.println(sb2.substring(3)); //3456789
+        System.out.println(sb2.substring(4, 8)); //4567
+        System.out.println(sb2.replace(3, 5, "ABCDE")); //012ABCDE56789
+
+        sb2 = new StringBuilder(numbers);
+        System.out.println(sb2.reverse()); //9876543210
+        sb2.reverse(); // Вернем изначальный порядок
+
+        sb2 = new StringBuilder(numbers);
+        System.out.println(sb2.delete(5, 9)); //012349
+        System.out.println(sb2.deleteCharAt(1)); //02349
+        System.out.println(sb2.insert(1, "One")); //0One2349
+
+        //Enum — это специальный тип перечисления именованных констант.
+        enum Season {
+            AUTUMN, WINTER, SPRING, SUMMER;
+        }
+        System.out.println(Season.AUTUMN);
+        StringBuilder allSeason = new StringBuilder();
+        allSeason.append(Season.AUTUMN);
+        allSeason.append(" ");
+        allSeason.append(Season.WINTER);
+        allSeason.append(" ");
+        allSeason.append(Season.SPRING);
+        allSeason.append(" ");
+        allSeason.append(Season.SUMMER);
+        System.out.println(allSeason);
     }
 }
